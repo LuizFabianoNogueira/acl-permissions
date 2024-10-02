@@ -16,6 +16,7 @@ Route::controller(AclPermissionsController::class)
                 Route::get('/list', 'permissions')->name('list');
                 Route::get('/create', 'permissionCreate')->name('create');
                 Route::post('/store', 'permissionStore')->name('store');
+                Route::post('/store-custom', 'permissionStoreCustom')->name('storeCustom');
                 Route::delete('/destroy', 'permissionDestroy')->name('destroy');
         });
 
@@ -39,6 +40,7 @@ Route::controller(AclPermissionsController::class)
 
                 Route::get('/list', 'users')->name('list');
                 Route::get('/user-x-roles/{id}', 'userRoles')->name('userRoles');
+                Route::post('/user-x-roles', 'userRolesStore')->name('userRolesStore');
         });
 
 });

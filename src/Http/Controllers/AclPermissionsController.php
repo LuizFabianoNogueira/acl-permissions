@@ -120,6 +120,22 @@ class AclPermissionsController extends Controller
 
     /**
      * @param Request $request
+     * @return RedirectResponse
+     */
+    public function permissionStoreCustom(Request $request): RedirectResponse
+    {
+        Permission::create([
+            'name' => $request->name,
+            'description' => $request->description,
+            'module' => $request->module,
+            'controller' => $request->controller,
+            'action' => $request->action,
+        ]);
+        return response()->redirectToRoute('acl-permissions.permissions.list');
+    }
+
+    /**
+     * @param Request $request
      * @return Factory|View|Application|\Illuminate\View\View
      */
     public function users(Request $request)
@@ -137,6 +153,22 @@ class AclPermissionsController extends Controller
         return view('acl-permissions.user-x-roles', [
             'user' => $user,
             'roles' => $roles
+        ]);
+    }
+
+    /**
+     *
+     * Save the user roles
+     *
+     * @param Request $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function userRolesStore(Request $request): \Illuminate\Http\JsonResponse
+    {
+        $user = $this->modelUser->find($request->user_id);
+        $user->roles()->sync($request->roles);
+        return response()->json([
+            'status' => 'success'
         ]);
     }
 
