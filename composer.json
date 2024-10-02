@@ -1,0 +1,30 @@
+{
+    "name": "luizfabianonogueira/acl-permissions",
+    "description": "ACL Permissions is a Laravel package that provides a robust and flexible access control system based on ACL (Access Control List). It allows you to define and manage permissions in a granular way for users and groups, ensuring that each resource is accessed only by those with proper authorization.",
+    "keywords": ["acl", "permission", "access-control-list", "authorization", "laravel", "laravel-package", "laravel-acl", "laravel-permission", "laravel-access-control-list"],
+    "type": "library",
+    "license": "LGPL-3.0-or-later",
+    "autoload": {
+        "psr-4": {
+            "LuizFabianoNogueira\\AclPermissions\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Luiz Fabianno Nogueira",
+            "email": "luizfabianonogueira@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=8.3",
+        "laravel/framework": ">=v10.0.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LuizFabianoNogueira\\AclPermissions\\AclPermissionsServiceProvider"
+            ]
+        }
+    }
+}
