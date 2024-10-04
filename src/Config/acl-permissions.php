@@ -20,6 +20,6 @@ return [
     /**
      * The role model that should be used to retrieve your permissions.
      */
-    'role' => App\Models\Role::class
+    'role' => null
 
 ];

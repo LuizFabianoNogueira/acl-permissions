@@ -99,7 +99,7 @@ class AclPermissionsController extends Controller
             }
         }
 
-        return response()->redirectToRoute('acl-permissions.permissions.show');
+        return response()->redirectToRoute('acl-permissions.permissions.list');
     }
 
     /**
@@ -115,7 +115,7 @@ class AclPermissionsController extends Controller
         if ($permission) {
             $permission->delete();
         }
-        return response()->redirectToRoute('acl-permissions.permissions.show');
+        return response()->redirectToRoute('acl-permissions.permissions.list');
     }
 
     /**
