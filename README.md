@@ -7,8 +7,13 @@
 [![Total Downloads](https://poser.pugx.org/luizfabianonogueira/acl-permissions/downloads)](//packagist.org/packages/luizfabianonogueira/acl-permissions)
 [![Latest Unstable Version](https://poser.pugx.org/luizfabianonogueira/acl-permissions/v/unstable)](//packagist.org/packages/luizfabianonogueira/acl-permissions)
 [![License](https://poser.pugx.org/luizfabianonogueira/acl-permissions/license)](//packagist.org/packages/luizfabianonogueira/acl-permissions)
+[![Static Badge](https://img.shields.io/badge/:badgeContent)](https://img.shields.io/badge/:badgeContent)
+
 
 This package is a simple and easy way to manage permissions in Laravel applications.
+
+
+![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=IN%20DEVELOPMENT&color=GREEN&style=for-the-badge)
 
 ## Installation
 
