@@ -25,6 +25,17 @@ composer require luizfabianonogueira/acl-permissions
 
 ## Configuration
 
+In bootstrp/app.php add the following line:
+```php
+use LuizFabianoNogueira\AclPermissions\AclPermissionsServiceProvider;
+
+return [
+    ...
+    AclPermissionsServiceProvider::class,
+    ...
+];
+```
+
 You can publish the config file with:
 ```bash
 php artisan vendor:publish --tag="acl-permissions-config"
